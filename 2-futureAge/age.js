@@ -22,3 +22,17 @@
 //    Print your message to the browser using document.write()
 //
 // 👇 WRITE YOUR CODE HERE 👇
+
+const userBirthYear = prompt("What year were you born?");
+const futureYear = prompt("What year in the future would you like to compare to?");
+
+let ageCalculation = function(birth, future) {
+    let age = future - birth;
+    return age;
+}
+
+let maximumAge = ageCalculation(userBirthYear, futureYear);
+let minimumAge = maximumAge - 1;
+
+const message = "You will be either " + minimumAge + " or " + maximumAge + " in " + futureYear +".";
+document.write(message);

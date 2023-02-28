@@ -35,3 +35,26 @@
 //    Then test out your program with different numbers and snack!
 //
 // 👇 WRITE YOUR CODE HERE 👇
+const favoriteSnack = prompt("What is your favorite snack?");
+const dailySnacking = prompt("How many " + favoriteSnack + " do you think you could eat everyday?");
+const userAge = prompt("What is your age?");
+
+const supplyCalculation = function(age, consumption) {
+    let lifeExpectancy = (100 - age) * 365;
+    return lifeExpectancy * consumption;
+}
+
+let lifetimeSupply = supplyCalculation(userAge, dailySnacking);
+document.write(
+    "Congratulations, you have won a lifetime supply of " 
+    + favoriteSnack 
+    + "! <br/> You will receive " 
+    + dailySnacking 
+    + " " 
+    + favoriteSnack 
+    + " per day, for a grand total of " 
+    + lifetimeSupply 
+    + " " 
+    + favoriteSnack 
+    + "!"
+);
