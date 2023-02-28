@@ -22,7 +22,14 @@
 // Like 76.266666666667, that's perfectly fine!  You can leave those as is.
 //
 // 👇 WRITE YOUR CODE HERE 👇
+let fahrenheit = prompt("What is the temperature in Fahrenheit that you want to convert to Celsius");
 
 const convertFtoC = function (temp) {
-
+    let celsiusTemp = (temp - 32) * 5 / 9;
+    return celsiusTemp;
 }
+
+let theConversion = convertFtoC(fahrenheit);
+let conversionMessage = fahrenheit + "\u00B0F converted to Celsius is " + theConversion + "\u00B0C";
+
+document.write(conversionMessage);
